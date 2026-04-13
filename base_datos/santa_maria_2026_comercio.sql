@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-04-2026 a las 21:11:52
+-- Tiempo de generación: 13-04-2026 a las 22:53:02
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -38,6 +38,15 @@ CREATE TABLE `cliente` (
   `vendedor_cliente` varchar(100) DEFAULT NULL,
   `region_cliente` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id_cliente`, `documento_cliente`, `nombre_cliente`, `direccion_cliente`, `pais_cliente`, `telefono_cliente`, `fecha_pedido_cliente`, `vendedor_cliente`, `region_cliente`) VALUES
+(1, 101001, 'Anan Torres', 'Calle 10 # 12-34', 'Colombia', '3001112233', '2026-04-10', 'Carlos Mendez', 'Andina'),
+(2, 101002, 'Santiago Sandino', 'Calle 50 # 13-16', 'Venezuela', '3012345685', '2026-04-10', 'Juan Daniel Cruz', 'Caribe'),
+(3, 101003, 'Pepito perez', 'Carrera 49 # 32-60', 'Colombia', '3103345188', '2026-03-12', 'Julio Ortiz', 'Amazonica');
 
 -- --------------------------------------------------------
 
@@ -130,7 +139,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
