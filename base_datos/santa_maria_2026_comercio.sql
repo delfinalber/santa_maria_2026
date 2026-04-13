@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-04-2026 a las 22:53:02
+-- Tiempo de generación: 13-04-2026 a las 23:36:31
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -46,7 +46,7 @@ CREATE TABLE `cliente` (
 INSERT INTO `cliente` (`id_cliente`, `documento_cliente`, `nombre_cliente`, `direccion_cliente`, `pais_cliente`, `telefono_cliente`, `fecha_pedido_cliente`, `vendedor_cliente`, `region_cliente`) VALUES
 (1, 101001, 'Anan Torres', 'Calle 10 # 12-34', 'Colombia', '3001112233', '2026-04-10', 'Carlos Mendez', 'Andina'),
 (2, 101002, 'Santiago Sandino', 'Calle 50 # 13-16', 'Venezuela', '3012345685', '2026-04-10', 'Juan Daniel Cruz', 'Caribe'),
-(3, 101003, 'Pepito Perez', 'Carrera 49 # 32-60', 'Colombia', '3103345188', '2026-03-12', 'Julio Ortiz', 'Amazonica'),
+(3, 101003, 'Pepito perez', 'Carrera 49 # 32-60', 'Colombia', '3103345188', '2026-03-12', 'Julio Ortiz', 'Amazonica'),
 (4, 101004, 'Laura Gomez', 'Calle 23 # 15-20', 'Colombia', '3204456677', '2026-03-15', 'Carlos Mendez', 'Andina'),
 (5, 101005, 'Mateo Rojas', 'Avenida 7 # 45-12', 'Ecuador', '3115567788', '2026-03-16', 'Juan Daniel Cruz', 'Pacifica'),
 (6, 101006, 'Camila Diaz', 'Calle 80 # 10-33', 'Colombia', '3126678899', '2026-03-18', 'Julio Ortiz', 'Caribe'),
