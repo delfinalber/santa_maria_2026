@@ -72,6 +72,27 @@ CREATE TABLE `departamento_join` (
   `presupuesto_departamento` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
+--
+-- Volcado de datos para la tabla `departamento_join`
+--
+
+INSERT INTO `departamento_join` (`codigo_departamento`, `nombre_departemento`, `presupuesto_departamento`) VALUES
+(1, 'Gerencia', 950000),
+(2, 'Recursos Humanos', 420000),
+(3, 'Contabilidad', 510000),
+(4, 'Tesoreria', 390000),
+(5, 'Compras', 460000),
+(6, 'Ventas', 780000),
+(7, 'Marketing', 620000),
+(8, 'Logistica', 680000),
+(9, 'Inventario', 540000),
+(10, 'Atencion al Cliente', 350000),
+(11, 'Sistemas', 830000),
+(12, 'Mantenimiento', 300000),
+(13, 'Seguridad', 280000),
+(14, 'Calidad', 470000),
+(15, 'Operacion Regional', 710000);
+
 -- --------------------------------------------------------
 
 --
@@ -126,6 +147,27 @@ CREATE TABLE `empleado_join` (
   `apellido2_join` varchar(100) NOT NULL,
   `codigo_departamento` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `empleado_join`
+--
+
+INSERT INTO `empleado_join` (`codigo_join`, `nif_join`, `nombre_join`, `apellido1_join`, `apellido2_join`, `codigo_departamento`) VALUES
+(1, '1001001', 'Carlos', 'Mendez', 'Rojas', 1),
+(2, '1001002', 'Luisa', 'Fernandez', 'Morales', 2),
+(3, '1001003', 'Andres', 'Castillo', 'Vega', 3),
+(4, '1001004', 'Paula', 'Suarez', 'Quintero', 4),
+(5, '1001005', 'Miguel', 'Torres', 'Salazar', 5),
+(6, '1001006', 'Daniela', 'Cruz', 'Lopez', 6),
+(7, '1001007', 'Julian', 'Ramirez', 'Soto', 7),
+(8, '1001008', 'Valeria', 'Herrera', 'Nunez', 8),
+(9, '1001009', 'Sergio', 'Navarro', 'Diaz', 9),
+(10, '1001010', 'Camila', 'Pardo', 'Gil', 10),
+(11, '1001011', 'Felipe', 'Ortega', 'Mejia', 11),
+(12, '1001012', 'Natalia', 'Reyes', 'Campos', 12),
+(13, '1001013', 'Jorge', 'Vargas', 'Leon', 13),
+(14, '1001014', 'Mariana', 'Guerrero', 'Ibarra', 14),
+(15, '1001015', 'Sebastian', 'Parra', 'Benitez', 15);
 
 -- --------------------------------------------------------
 
@@ -230,7 +272,8 @@ ALTER TABLE `elementos_linea`
 -- Indices de la tabla `empleado_join`
 --
 ALTER TABLE `empleado_join`
-  ADD PRIMARY KEY (`codigo_join`);
+  ADD PRIMARY KEY (`codigo_join`),
+  ADD KEY `codigo_departamento` (`codigo_departamento`);
 
 --
 -- Indices de la tabla `factura`
@@ -283,6 +326,12 @@ ALTER TABLE `producto`
 ALTER TABLE `elementos_linea`
   ADD CONSTRAINT `elementos_linea_ibfk_1` FOREIGN KEY (`id_factura`) REFERENCES `factura` (`id_factura`),
   ADD CONSTRAINT `elementos_linea_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
+
+--
+-- Filtros para la tabla `empleado_join`
+--
+ALTER TABLE `empleado_join`
+  ADD CONSTRAINT `empleado_join_ibfk_1` FOREIGN KEY (`codigo_departamento`) REFERENCES `departamento_join` (`codigo_departamento`);
 
 --
 -- Filtros para la tabla `factura`
