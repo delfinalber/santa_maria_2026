@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-04-2026 a las 23:36:31
+-- Tiempo de generación: 23-04-2026 a las 22:10:07
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -63,6 +63,18 @@ INSERT INTO `cliente` (`id_cliente`, `documento_cliente`, `nombre_cliente`, `dir
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `departamento_join`
+--
+
+CREATE TABLE `departamento_join` (
+  `codigo_departamento` int(11) NOT NULL,
+  `nombre_departemento` varchar(100) NOT NULL,
+  `presupuesto_departamento` int(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `elementos_linea`
 --
 
@@ -99,6 +111,21 @@ INSERT INTO `elementos_linea` (`id_elementos_linea`, `id_factura`, `id_producto`
 (13, 13, 13, 15000, 2, 30000, 'Detergente 2kg', 30000, 98, '2026-04-01'),
 (14, 14, 14, 5400, 6, 32400, 'Huevos Docena', 32400, 214, '2026-04-04'),
 (15, 15, 15, 7200, 5, 36000, 'Harina de Trigo 1kg', 36000, 160, '2026-04-06');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `empleado_join`
+--
+
+CREATE TABLE `empleado_join` (
+  `codigo_join` int(11) NOT NULL,
+  `nif_join` varchar(100) NOT NULL,
+  `nombre_join` varchar(100) NOT NULL,
+  `apellido1_join` varchar(100) NOT NULL,
+  `apellido2_join` varchar(100) NOT NULL,
+  `codigo_departamento` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
 
@@ -186,12 +213,24 @@ ALTER TABLE `cliente`
   ADD UNIQUE KEY `documento_cliente` (`documento_cliente`);
 
 --
+-- Indices de la tabla `departamento_join`
+--
+ALTER TABLE `departamento_join`
+  ADD PRIMARY KEY (`codigo_departamento`);
+
+--
 -- Indices de la tabla `elementos_linea`
 --
 ALTER TABLE `elementos_linea`
   ADD PRIMARY KEY (`id_elementos_linea`),
   ADD KEY `id_factura` (`id_factura`),
   ADD KEY `id_producto` (`id_producto`);
+
+--
+-- Indices de la tabla `empleado_join`
+--
+ALTER TABLE `empleado_join`
+  ADD PRIMARY KEY (`codigo_join`);
 
 --
 -- Indices de la tabla `factura`
@@ -215,6 +254,18 @@ ALTER TABLE `producto`
 --
 ALTER TABLE `cliente`
   MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT de la tabla `departamento_join`
+--
+ALTER TABLE `departamento_join`
+  MODIFY `codigo_departamento` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `empleado_join`
+--
+ALTER TABLE `empleado_join`
+  MODIFY `codigo_join` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
