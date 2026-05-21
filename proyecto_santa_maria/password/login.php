@@ -2,8 +2,8 @@
 
 include('conexion.php');
 
-$usuario      = $_POST['usuario'];
-$contrasena   = $_POST['contrasena'];
+$usuario      = isset($_POST['usuario']) ? $_POST['usuario'] : '';
+$contrasena   = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
 //$sesion_login = true;
 
 ini_set('display_errors', 'off');
@@ -16,27 +16,30 @@ $url= "https://www.lanacion.com.co/";
 
 //$consulta = mysqli_query ($link, "SELECT * FROM users WHERE ususario = '$usuario' AND contrasena = '$contrasena'");
 
-$query = "SELECT * FROM users WHERE usuario ='$usuario' AND contrasena = '$contrasena'";
-$q = mysqli_query($link, $query);
-try{
-
-	if(mysqli_result($q, 0))
-	{$result = mysqli_result($q, 0);
-
-		//header("Location: https://www.lanacion.com.co/", true, 301);
-		//exit();
-		
-		//echo '<script type="text/javascript">
+if(isset($link) && $link) {
+	$query = "SELECT * FROM users WHERE usuario ='$usuario' AND contrasena = '$contrasena'";
+	$q = mysqli_query($link, $query);
+	try{
+		if($q && mysqli_num_rows($q) > 0)
+		{
+			$result = mysqli_fetch_assoc($q);
+			//header("Location: https://www.lanacion.com.co/", true, 301);
+			//exit();
+			
+			//echo '<script type="text/javascript">
           //window.location = "http://www.google.com/"
       //</scrit>';
 
-		//echo "<script>location.href= '$url'</script>";
+			//echo "<script>location.href= '$url'</script>";
 
-		//echo "<script> window.location.href = $url; </script>";
-		  //echo "Usuario Valido Correctamente";
-	}else
-		echo "Usuario o Contraseña Erroneos";
+			//echo "<script> window.location.href = $url; </script>";
+			  //echo "Usuario Valido Correctamente";
+		}else
+			echo "Usuario o Contraseña Erroneos";
 	}catch(Exception $error) {}
 
 	mysqli_close($link);
+} else {
+	echo "Error de conexión a la base de datos";
+}
 ?>
