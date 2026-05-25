@@ -1,52 +1,43 @@
-<?php ?>
-<!DOCTYPE html >
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="mystyle.css" />
-		<script type="text/javascript" ></script>
-		<title>Alber Delfin Peña Ortigoza</title>
-<script type="text/javascript">
-	
-</script>
-	</head>
-<body >
-	<section id='top'>
-		<header id="header">
-			<h1>Validar un Nombre de Usuario</h1>
-		</header>
-	</section>
-	<section id="menus">
-		<nav id="top_menu">
-			<ul>
-			</ul>
-		</nav>
-	</section>
-<div id="wrapper">
-	<section id="cuerpo">
-		<form action="login.php" method="POST" name="formulario">
-			<p> Entra ya con tu cuenta y tu contraseña: </p>
-			<table>
-				<tr>
-					<td>Usuario:</td>
-					<td> <input type="text" class="input_field" name="usuario" /></td>
-					
-				</tr>
-				<tr>
-					<td>Contraseña:</td>
-					<td> <input type="password" class="input_field" name="contrasena" /></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="Acceder"/></td>
-				</tr>
-			</table>
-		</form>
-		
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePlus | Iniciar sesion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+    <div class="login-bg" aria-hidden="true"></div>
+    <header class="login-header">
+        <h1 class="brand">Cine<span>Plus</span></h1>
+    </header>
 
-	</section>
-	
+    <main class="login-main">
+        <section class="login-card" aria-labelledby="titulo-login">
+            <h2 id="titulo-login">Iniciar sesion</h2>
+            <p class="subtitle">Accede para ver tus peliculas y series favoritas.</p>
 
-</div>	
+            <form action="login.php" method="POST" name="formulario" autocomplete="on">
+                <label for="usuario">Usuario</label>
+                <input id="usuario" type="text" class="input_field" name="usuario" placeholder="Escribe tu usuario" required>
+
+                <label for="contrasena">Contrasena</label>
+                <input id="contrasena" type="password" class="input_field" name="contrasena" placeholder="Escribe tu contrasena" required>
+
+                <button type="submit" class="submit-btn">Entrar</button>
+            </form>
+
+            <div class="help-row">
+                <label class="remember-option">
+                    <input type="checkbox" name="recordar">
+                    Recordarme
+                </label>
+                <a href="#">Necesitas ayuda?</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
