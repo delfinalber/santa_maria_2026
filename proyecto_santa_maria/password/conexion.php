@@ -1,4 +1,3 @@
-
 <?php
 
 //Conexion por procedimientos
