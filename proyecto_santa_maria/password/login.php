@@ -17,14 +17,14 @@ $url= "https://www.lanacion.com.co/";
 //$consulta = mysqli_query ($link, "SELECT * FROM users WHERE ususario = '$usuario' AND contrasena = '$contrasena'");
 
 if(isset($link) && $link) {
-	$query = "SELECT * FROM users WHERE usuario ='$usuario' AND contrasena = '$contrasena'";
+	$query = "SELECT * FROM users WHERE usuario_users ='$usuario' AND contrasena_users = '$contrasena'";
 	$q = mysqli_query($link, $query);
 	try{
 		if($q && mysqli_num_rows($q) > 0)
 		{
 			$result = mysqli_fetch_assoc($q);
-			//header("Location: https://www.lanacion.com.co/", true, 301);
-			//exit();
+			header("Location: https://www.lanacion.com.co/", true, 301);
+			exit();
 			
 			//echo '<script type="text/javascript">
           //window.location = "http://www.google.com/"
