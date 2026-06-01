@@ -1,0 +1,48 @@
+/*
+ * Copyright (c) 2026 . All rights reserved.
+ */
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+.div3 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.div4 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 3;
+}
+
+.div5 {
+    grid-row-start: 4;
+}
+
+.div6 {
+    grid-row-start: 4;
+}
+
+.div7 {
+    grid-row-start: 4;
+}
+
+.div8 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 5;
+}
+        
