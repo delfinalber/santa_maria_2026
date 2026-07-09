@@ -2,6 +2,109 @@
  * Copyright (c) 2026 . All rights reserved.
  */
 
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+:root {
+    --banner-deep: #0f3f4f;
+    --banner-mid: #1f6c72;
+    --banner-forest: #2f6f52;
+    --banner-cream: #f3f6ef;
+    --banner-accent: #c8b88a;
+}
+
+.banner-full {
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.banner-full img {
+    width: 100vw;
+    max-width: none;
+    height: auto;
+    display: block;
+}
+
+.navbar-banner {
+    background: linear-gradient(120deg, rgba(15, 63, 79, 0.95), rgba(31, 108, 114, 0.92) 55%, rgba(47, 111, 82, 0.9));
+    border-top: 1px solid rgba(243, 246, 239, 0.25);
+    border-bottom: 1px solid rgba(200, 184, 138, 0.4);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+}
+
+.navbar-banner .navbar-brand,
+.navbar-banner .nav-link,
+.navbar-banner .navbar-text {
+    color: var(--banner-cream);
+}
+
+.navbar-banner .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.navbar-banner .nav-link:hover,
+.navbar-banner .nav-link:focus,
+.navbar-banner .nav-link.active {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(243, 246, 239, 0.35);
+}
+
+.navbar-banner .navbar-toggler {
+    border-color: rgba(243, 246, 239, 0.35);
+}
+
+.navbar-banner .dropdown-menu {
+    background-color: rgba(11, 48, 61, 0.96);
+    border: 1px solid rgba(200, 184, 138, 0.45);
+}
+
+.navbar-banner .dropdown-item {
+    color: var(--banner-cream);
+}
+
+.navbar-banner .dropdown-item:hover,
+.navbar-banner .dropdown-item:focus {
+    background-color: rgba(200, 184, 138, 0.2);
+    color: #ffffff;
+}
+
+.form-control-banner {
+    border: 1px solid rgba(243, 246, 239, 0.5);
+    background-color: rgba(243, 246, 239, 0.12);
+    color: #ffffff;
+}
+
+.form-control-banner::placeholder {
+    color: rgba(243, 246, 239, 0.8);
+}
+
+.form-control-banner:focus {
+    border-color: var(--banner-accent);
+    box-shadow: 0 0 0 0.2rem rgba(200, 184, 138, 0.25);
+    background-color: rgba(243, 246, 239, 0.18);
+    color: #ffffff;
+}
+
+.btn-banner {
+    border: 1px solid var(--banner-accent);
+    color: var(--banner-cream);
+    background-color: rgba(200, 184, 138, 0.18);
+}
+
+.btn-banner:hover,
+.btn-banner:focus {
+    background-color: rgba(200, 184, 138, 0.38);
+    color: #ffffff;
+}
+
 
 .parent {
     display: grid;
