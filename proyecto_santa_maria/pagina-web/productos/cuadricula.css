@@ -106,6 +106,75 @@ body {
     color: #ffffff;
 }
 
+/* Tarjetas de productos: paleta del banner + imágenes ajustadas al marco */
+.card-producto {
+    --card-media-height: clamp(210px, 25vw, 280px);
+    border: 1px solid rgba(200, 184, 138, 0.45);
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(15, 63, 79, 0.96), rgba(31, 108, 114, 0.93) 55%, rgba(47, 111, 82, 0.9));
+    box-shadow: 0 14px 30px rgba(15, 63, 79, 0.22);
+    color: var(--banner-cream);
+    height: 100%;
+}
+
+.card-producto .carousel {
+    height: var(--card-media-height);
+}
+
+.card-producto .carousel-inner,
+.card-producto .carousel-item {
+    height: 100%;
+}
+
+.card-producto .carousel-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-producto .card-body {
+    background: linear-gradient(180deg, rgba(11, 48, 61, 0.2), rgba(11, 48, 61, 0.45));
+    border-top: 1px solid rgba(200, 184, 138, 0.38);
+}
+
+.card-producto .card-title {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.card-producto .card-text {
+    color: rgba(243, 246, 239, 0.9);
+}
+
+.card-producto .btn-primary {
+    border: 1px solid rgba(200, 184, 138, 0.82);
+    background: rgba(200, 184, 138, 0.22);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.card-producto .btn-primary:hover,
+.card-producto .btn-primary:focus {
+    background: rgba(200, 184, 138, 0.42);
+    border-color: rgba(243, 246, 239, 0.95);
+    color: #ffffff;
+}
+
+.card-producto .carousel-control-prev-icon,
+.card-producto .carousel-control-next-icon {
+    background-color: rgba(11, 48, 61, 0.58);
+    border-radius: 999px;
+    box-shadow: 0 0 0 7px rgba(243, 246, 239, 0.1);
+}
+
+.card-producto .carousel-control-prev-icon:hover,
+.card-producto .carousel-control-next-icon:hover {
+    background-color: rgba(200, 184, 138, 0.45);
+}
+
 .carousel-section {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -475,6 +544,10 @@ body {
 }
 
 @media (max-width: 767.98px) {
+    .card-producto {
+        --card-media-height: 220px;
+    }
+
     .site-footer {
         text-align: center;
     }
