@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f3f4f"/>
+      <stop offset="55%" stop-color="#1f6c72"/>
+      <stop offset="100%" stop-color="#2f6f52"/>
+    </linearGradient>
+    <linearGradient id="ig" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8b88a" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#f3f6ef" stop-opacity="0.68"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <rect x="1" y="1" width="398" height="298" fill="none" stroke="#c8b88a" stroke-width="1.5" stroke-opacity="0.55"/>
+  <line x1="0" y1="25" x2="25" y2="0" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="375" y1="0" x2="400" y2="25" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="0" y1="275" x2="25" y2="300" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="375" y1="300" x2="400" y2="275" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <g transform="rotate(-10, 200, 150)"><rect x="80" y="136" width="200" height="18" rx="3" fill="url(#ig)" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.65"/><line x1="80" y1="154" x2="280" y2="136" stroke="#f3f6ef" stroke-width="1" stroke-opacity="0.18"/><rect x="270" y="128" width="44" height="34" rx="8" fill="#c8b88a" fill-opacity="0.72"/><line x1="270" y1="139" x2="270" y2="151" stroke="#0f3f4f" stroke-width="2" stroke-opacity="0.45"/></g>
+  <text x="200" y="248" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="#f3f6ef">Machete Agr&#xED;cola</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#c8b88a" fill-opacity="0.9">Vista frontal</text>
+</svg>
