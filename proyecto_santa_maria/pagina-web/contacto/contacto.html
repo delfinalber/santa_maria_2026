@@ -57,22 +57,45 @@
     <!-- Fin Barra de navegación    -->
      <br>
     <!-- Inicio Mapa y formulario de contacto -->
-    <div class="container text-center">
-  <div class="row">
-    <div class="col-8">
-      <!--Inicio Mapa Google-->
-        <iframe src="https://www.google.com/maps/embed?pb=!4v1787258583355!6m8!1m7!1sEcTvenUcbkqICAEg7CtKzg!2m2!1d2.937118135255079!2d-75.58689253436026!3f127.2434488489061!4f-0.8623272311331647!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      <!--Fin mapa Google-->
-    </div>
-    <div class="col-4">
-      <!--Inicio Formulario de contacto-->
+    <div class="container contacto-section text-center">
+        <div class="row g-4 align-items-stretch contacto-row">
+            <div class="col-12 col-lg-8">
+            <!--Inicio Mapa Google-->
+                <div class="mapa-contacto">
+                    <iframe class="mapa-frame" title="Mapa de ubicación CADEFI-HUILA" src="https://www.google.com/maps/embed?pb=!4v1787258583355!6m8!1m7!1sEcTvenUcbkqICAEg7CtKzg!2m2!1d2.937118135255079!2d-75.58689253436026!3f127.2434488489061!4f-0.8623272311331647!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            <!--Fin mapa Google-->
+            </div>
+            <div class="col-12 col-lg-4">
+            <!--Inicio Formulario de contacto-->
+                <form class="formulario-contacto text-start">
+                        <h2 class="formulario-titulo">Escríbenos</h2>
+                        <div class="mb-3">
+                            <label for="inputEmail3" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Digite su correo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputnombre3" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputnombre3" placeholder="Digite su nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputtelefono3" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="inputtelefono3" placeholder="Digite su teléfono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputmensaje3" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="inputmensaje3" rows="3" maxlength="500" placeholder="Maximo 500 caracteres" name="texto_area"></textarea>
+                        </div>
 
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-secondary">Borrar</button>
+                </form>
 
-      <!--Fin Formulario de contacto-->
-    </div>
+            <!--Fin Formulario de contacto-->
+            </div>
     
-  </div>
-</div>
+        </div>
+    </div>
 
     <!-- Fin Mapa y formulario de contacto -->
     <br>

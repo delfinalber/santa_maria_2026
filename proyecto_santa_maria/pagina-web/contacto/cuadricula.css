@@ -106,331 +106,109 @@ body {
     color: #ffffff;
 }
 
-/* Tarjetas de productos: paleta del banner + imágenes ajustadas al marco */
-.card-producto {
-    --card-media-height: clamp(210px, 25vw, 280px);
-    border: 1px solid rgba(200, 184, 138, 0.45);
-    border-radius: 18px;
-    overflow: hidden;
-    background: linear-gradient(145deg, rgba(15, 63, 79, 0.96), rgba(31, 108, 114, 0.93) 55%, rgba(47, 111, 82, 0.9));
-    box-shadow: 0 14px 30px rgba(15, 63, 79, 0.22);
-    color: var(--banner-cream);
-    height: 100%;
-}
-
-.card-producto .carousel {
-    height: var(--card-media-height);
-}
-
-.card-producto .carousel-inner,
-.card-producto .carousel-item {
-    height: 100%;
-}
-
-.card-producto .carousel-item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-}
-
-.card-producto .card-body {
-    background: linear-gradient(180deg, rgba(11, 48, 61, 0.2), rgba(11, 48, 61, 0.45));
-    border-top: 1px solid rgba(200, 184, 138, 0.38);
-}
-
-.card-producto .card-title {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.card-producto .card-text {
-    color: rgba(243, 246, 239, 0.9);
-}
-
-.card-producto .btn-primary {
-    border: 1px solid rgba(200, 184, 138, 0.82);
-    background: rgba(200, 184, 138, 0.22);
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.card-producto .btn-primary:hover,
-.card-producto .btn-primary:focus {
-    background: rgba(200, 184, 138, 0.42);
-    border-color: rgba(243, 246, 239, 0.95);
-    color: #ffffff;
-}
-
-.card-producto .carousel-control-prev-icon,
-.card-producto .carousel-control-next-icon {
-    background-color: rgba(11, 48, 61, 0.58);
-    border-radius: 999px;
-    box-shadow: 0 0 0 7px rgba(243, 246, 239, 0.1);
-}
-
-.card-producto .carousel-control-prev-icon:hover,
-.card-producto .carousel-control-next-icon:hover {
-    background-color: rgba(200, 184, 138, 0.45);
-}
-
-.carousel-section {
+/* Inicio: Mapa y formulario de contacto (misma paleta del banner.png) */
+.contacto-section {
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 
-.carousel-section {
-    --media-height: clamp(320px, 50vw, 520px);
+.contacto-row {
+    align-items: stretch;
 }
 
-.carousel-row {
-    min-height: var(--media-height);
-}
-
-.carousel-row > [class*="col-"] {
+.contacto-row > [class*="col-"] {
     min-width: 0;
     display: flex;
 }
 
-.carousel-banner {
+.mapa-contacto {
     position: relative;
     overflow: hidden;
     border-radius: 18px;
     border: 1px solid rgba(200, 184, 138, 0.45);
     background: linear-gradient(135deg, rgba(15, 63, 79, 0.92), rgba(31, 108, 114, 0.9) 55%, rgba(47, 111, 82, 0.88));
     box-shadow: 0 18px 36px rgba(15, 63, 79, 0.26);
-    height: var(--media-height);
     width: 100%;
+    min-height: 420px;
+    padding: 0.5rem;
 }
 
-.carousel-banner .carousel-inner {
-    height: 100%;
-}
-
-.carousel-banner .carousel-item {
-    height: 100%;
-}
-
-.carousel-banner .carousel-item img {
+.mapa-frame {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    min-height: 400px;
     display: block;
+    border: 0;
+    border-radius: 14px;
 }
 
-.carousel-banner .carousel-control-prev,
-.carousel-banner .carousel-control-next {
-    width: 12%;
-}
-
-.carousel-banner .carousel-control-prev-icon,
-.carousel-banner .carousel-control-next-icon {
-    background-color: rgba(15, 63, 79, 0.55);
-    border-radius: 999px;
-    background-size: 55% 55%;
-    box-shadow: 0 0 0 8px rgba(243, 246, 239, 0.08);
-}
-
-.carousel-banner .carousel-control-prev-icon:hover,
-.carousel-banner .carousel-control-next-icon:hover {
-    background-color: rgba(200, 184, 138, 0.45);
-}
-
-.carousel-side {
-    height: var(--media-height);
+.formulario-contacto {
     width: 100%;
+    border: 1px solid rgba(200, 184, 138, 0.45);
     border-radius: 18px;
-    border: 1px solid rgba(200, 184, 138, 0.35);
-    background: linear-gradient(180deg, rgba(243, 246, 239, 0.96), rgba(231, 239, 231, 0.9));
-    color: var(--banner-deep);
-    box-shadow: 0 18px 36px rgba(15, 63, 79, 0.14);
-    display: flex;
-    justify-content: center;
-    padding: 0;
+    background: linear-gradient(145deg, rgba(15, 63, 79, 0.96), rgba(31, 108, 114, 0.93) 55%, rgba(47, 111, 82, 0.9));
+    box-shadow: 0 14px 30px rgba(15, 63, 79, 0.22);
+    color: var(--banner-cream);
+    padding: 1.6rem 1.5rem;
+}
+
+.formulario-titulo {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(200, 184, 138, 0.35);
+}
+
+.formulario-contacto .col-form-label,
+.formulario-contacto .form-label {
+    color: var(--banner-cream);
     font-weight: 600;
-    overflow: hidden;
 }
 
-.video-panel iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: 0;
-}
-
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-}
-    
-.div1 {
-    grid-column: span 3 / span 3;
-    
-    }
-
-
-.div2 {
-    grid-column: 1 / span 2;
-    grid-row-start: 2;
-    width: 100%;
-    overflow: hidden;
-}
-
-.div2 #carouselExampleFade {
-    width: 100%;
-    height: 315px;
-}
-
-.div2 .carousel,
-.div2 .carousel-inner,
-.div2 .carousel-item {
-    width: 100%;
-}
-
-.div2 .carousel-item img {
-    width: 100%;
-    height: 315px;
-    object-fit: cover;
-    display: block;
-}
-
-.div3 {
-    grid-column: 3 / span 1;
-    grid-row-start: 2;
-}
-
-.div3 iframe {
-    width: 560px;
-    height: 315px;
-    display: block;
-}
-
-.div4 {
-    grid-column: span 3 / span 3;
-    grid-row-start: 3;
-}
-
-.div5 {
-    grid-row-start: 4;
-}
-
-.div6 {
-    grid-row-start: 4;
-}
-
-.div7 {
-    grid-row-start: 4;
-}
-
-.div8 {
-    grid-column: span 3 / span 3;
-    grid-row-start: 5;
-}
-
-.accordion {
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid rgba(200, 184, 138, 0.45);
-    box-shadow: 0 18px 36px rgba(15, 63, 79, 0.2);
-}
-
-.accordion-item {
-    border: 0;
-    background: linear-gradient(120deg, rgba(15, 63, 79, 0.95), rgba(31, 108, 114, 0.92) 58%, rgba(47, 111, 82, 0.9));
-}
-
-.accordion-item + .accordion-item {
-    border-top: 1px solid rgba(200, 184, 138, 0.35);
-}
-
-.accordion-button {
-    color: var(--banner-cream);
-    background: transparent;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-align: justify;
-    padding: 1rem 1.25rem;
-}
-
-.accordion-button:not(.collapsed) {
+.formulario-contacto .form-control {
+    border: 1px solid rgba(243, 246, 239, 0.5);
+    background-color: rgba(243, 246, 239, 0.12);
     color: #ffffff;
-    background: linear-gradient(90deg, rgba(200, 184, 138, 0.24), rgba(243, 246, 239, 0.12));
-    box-shadow: inset 0 -1px 0 rgba(200, 184, 138, 0.45);
 }
 
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.2rem rgba(200, 184, 138, 0.28);
+.formulario-contacto .form-control::placeholder {
+    color: rgba(243, 246, 239, 0.75);
 }
 
-.accordion-button::after {
-    filter: invert(95%) sepia(6%) saturate(204%) hue-rotate(39deg) brightness(105%) contrast(97%);
-}
-
-.accordion-button:hover {
-    background-color: rgba(243, 246, 239, 0.08);
-}
-
-.accordion-collapse {
-    background: linear-gradient(180deg, rgba(243, 246, 239, 0.98), rgba(231, 239, 231, 0.94));
-}
-
-.accordion-body {
-    text-align: justify;
-    font-size: 16px;
-    color: var(--banner-deep);
-    line-height: 1.65;
-    padding: 1rem 1.25rem 1.2rem;
-}
-
-.accordion-body strong {
-    color: var(--banner-mid);
-}
-
-.btn-collapse {
-    border: 1px solid rgba(200, 184, 138, 0.75);
-    background: linear-gradient(120deg, rgba(15, 63, 79, 0.95), rgba(31, 108, 114, 0.9) 58%, rgba(47, 111, 82, 0.9));
-    color: var(--banner-cream);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    border-radius: 999px;
-    padding: 0.7rem 1.2rem;
-    box-shadow: 0 8px 18px rgba(15, 63, 79, 0.2);
-}
-
-.btn-collapse:hover,
-.btn-collapse:focus {
-    background: linear-gradient(120deg, rgba(31, 108, 114, 0.95), rgba(47, 111, 82, 0.95));
+.formulario-contacto .form-control:focus {
+    border-color: var(--banner-accent);
+    box-shadow: 0 0 0 0.2rem rgba(200, 184, 138, 0.25);
+    background-color: rgba(243, 246, 239, 0.18);
     color: #ffffff;
-    box-shadow: 0 10px 22px rgba(15, 63, 79, 0.28);
 }
 
-.collapse-panel .card {
-    border: 1px solid rgba(200, 184, 138, 0.45);
-    background: linear-gradient(180deg, rgba(243, 246, 239, 0.98), rgba(231, 239, 231, 0.94));
-    color: var(--banner-deep);
-    border-radius: 16px;
-    padding: 1rem 1.15rem;
-    text-align: justify;
-    line-height: 1.65;
-    box-shadow: 0 10px 22px rgba(15, 63, 79, 0.12);
+.formulario-contacto .btn-primary {
+    border: 1px solid rgba(200, 184, 138, 0.82);
+    background: rgba(200, 184, 138, 0.22);
+    color: #ffffff;
+    font-weight: 600;
 }
 
-.collapse-panel .card-body,
-.collapse-panel .card {
-    text-align: justify;
+.formulario-contacto .btn-primary:hover,
+.formulario-contacto .btn-primary:focus {
+    background: rgba(200, 184, 138, 0.42);
+    border-color: rgba(243, 246, 239, 0.95);
+    color: #ffffff;
 }
 
-.collapse-shell {
-    min-height: 120px;
+.formulario-contacto .btn-secondary {
+    border: 1px solid rgba(243, 246, 239, 0.5);
+    background-color: rgba(243, 246, 239, 0.1);
+    color: var(--banner-cream);
+    font-weight: 600;
 }
 
-.collapse-card {
-    width: 300px;
+.formulario-contacto .btn-secondary:hover,
+.formulario-contacto .btn-secondary:focus {
+    background-color: rgba(243, 246, 239, 0.22);
+    color: #ffffff;
 }
 
 .site-footer {
@@ -543,11 +321,13 @@ body {
     letter-spacing: 0.02em;
 }
 
-@media (max-width: 767.98px) {
-    .card-producto {
-        --card-media-height: 220px;
+@media (max-width: 991.98px) {
+    .mapa-contacto {
+        min-height: 320px;
     }
+}
 
+@media (max-width: 767.98px) {
     .site-footer {
         text-align: center;
     }
