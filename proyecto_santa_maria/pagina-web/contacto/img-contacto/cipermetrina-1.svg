@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f3f4f"/>
+      <stop offset="55%" stop-color="#1f6c72"/>
+      <stop offset="100%" stop-color="#2f6f52"/>
+    </linearGradient>
+    <linearGradient id="ig" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8b88a" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#f3f6ef" stop-opacity="0.68"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <rect x="1" y="1" width="398" height="298" fill="none" stroke="#c8b88a" stroke-width="1.5" stroke-opacity="0.55"/>
+  <line x1="0" y1="25" x2="25" y2="0" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="375" y1="0" x2="400" y2="25" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="0" y1="275" x2="25" y2="300" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="375" y1="300" x2="400" y2="275" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.35"/>
+  <rect x="175" y="76" width="50" height="114" rx="10" fill="#f3f6ef" fill-opacity="0.12" stroke="#c8b88a" stroke-width="1.5" stroke-opacity="0.78"/><rect x="186" y="60" width="28" height="22" rx="5" fill="#c8b88a" fill-opacity="0.72"/><rect x="211" y="66" width="30" height="11" rx="4" fill="#c8b88a" fill-opacity="0.58"/><line x1="183" y1="108" x2="217" y2="108" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.45"/><line x1="183" y1="120" x2="217" y2="120" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.45"/><line x1="183" y1="132" x2="217" y2="132" stroke="#c8b88a" stroke-width="1" stroke-opacity="0.45"/><text x="200" y="163" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#c8b88a">200 g/L EC &#x2014; 1 L</text>
+  <text x="200" y="248" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="#f3f6ef">Insecticida Cipermetrina</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#c8b88a" fill-opacity="0.9">Vista frontal</text>
+</svg>
