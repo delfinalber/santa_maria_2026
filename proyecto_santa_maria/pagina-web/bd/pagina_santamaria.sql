@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-08-2026 a las 23:10:13
+-- Tiempo de generación: 31-08-2026 a las 22:06:01
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,6 +45,34 @@ INSERT INTO `formulario_contacto` (`id_formulario`, `correo_formulario`, `nombre
 (3, '', 'DANNA LISETH PULIDO ZABALETA', 3142089287, 'Hola Danna, espero aprenda a programar, diseño una pagina web o aplicativo web.'),
 (4, 'dianaaldana2409@gmail.com', 'DIANA ALDANA CASAS', 3114797276, 'Hola Diana como está.');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `inicio`
+--
+
+CREATE TABLE `inicio` (
+  `id_inicio` int(11) NOT NULL,
+  `banner_inicio` varchar(300) NOT NULL,
+  `carru_1_inicio` varchar(300) NOT NULL,
+  `carru_2_inicio` varchar(300) NOT NULL,
+  `carru_3_inicio` varchar(300) NOT NULL,
+  `url_video_inicio` varchar(500) NOT NULL,
+  `titulo_acordeon_1` varchar(100) NOT NULL,
+  `texto_acordeon_1` varchar(800) NOT NULL,
+  `titulo_acordeon_2` varchar(100) NOT NULL,
+  `texto_acordeon_2` varchar(800) NOT NULL,
+  `titulo_acordeon_3` varchar(100) NOT NULL,
+  `texto_acordeon_3` varchar(800) NOT NULL,
+  `titulo_colapsar_1` varchar(100) NOT NULL,
+  `texto_colapsar_1` varchar(300) NOT NULL,
+  `titulo_colapsar_2` varchar(100) NOT NULL,
+  `texto_colapsar_2` varchar(300) NOT NULL,
+  `titulo_colapsar3` varchar(100) NOT NULL,
+  `texto_colapsar_3` varchar(300) NOT NULL,
+  `numero_whatsapp` bigint(13) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
 --
 -- Índices para tablas volcadas
 --
@@ -56,6 +84,12 @@ ALTER TABLE `formulario_contacto`
   ADD PRIMARY KEY (`id_formulario`);
 
 --
+-- Indices de la tabla `inicio`
+--
+ALTER TABLE `inicio`
+  ADD PRIMARY KEY (`id_inicio`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -64,6 +98,12 @@ ALTER TABLE `formulario_contacto`
 --
 ALTER TABLE `formulario_contacto`
   MODIFY `id_formulario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `inicio`
+--
+ALTER TABLE `inicio`
+  MODIFY `id_inicio` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
